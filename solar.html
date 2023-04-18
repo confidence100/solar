@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confee System Browser</title>
+    <style>
+
+      /* Basic styling */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+      }
+      h1 {
+        color: #fff;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 36px;
+      }
+
+      /* Styling for the solar system */
+      #solar-system {
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 800px;
+      }
+      .planet {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      #sun {
+        width: 150px;
+        height: 150px;
+        top: 40%;
+        left: 45%;
+        box-shadow: 0 0 50px #fffc00, 0 0 100px #fffc00, 0 0 150px #fffc00, 0 0 200px #fffc00;
+        animation: rotate-sun 10s linear infinite;
+      }
+      #mercury {
+        width: 20px;
+        height: 20px;
+        top: 20%;
+        left: 25%;
+        animation: rotate-planet 4s linear infinite;
+        animation-delay: 1s;
+      }
+      #venus {
+        width: 30px;
+        height: 30px;
+        top: 30%;
+        left: 10%;
+        animation: rotate-planet 6s linear infinite;
+        animation-delay: 2s;
+      }
+      #earth {
+        width: 35px;
+        height: 35px;
+        top: 45%;
+        left: 10%;
+        animation: rotate-planet 8s linear infinite;
+        animation-delay: 3s;
+      }
+      #mars {
+        width: 25px;
+        height:25px;
+        top: 60%;
+        left: 20%;
+        animation: rotate-planet 10s linear infinite;
+        animation-delay: 4s;
+      }
+      #jupiter {
+        width: 70px;
+        height: 70px;
+        top: 20%;
+        left: 65%;
+        animation: rotate-planet 16s linear infinite;
+        animation-delay: 5s;
+      }
+      #saturn {
+        width: 60px;
+        height: 60px;
+        top: 40%;
+        left: 75%;
+        animation: rotate-planet 20s linear infinite;
+        animation-delay: 6s;
+      }
+      #uranus {
+        width: 50px;
+        height: 50px;
+        top: 60%;
+        left: 65%;
+        animation: rotate-planet 24s linear infinite;
+        animation-delay: 7s;
+      }
+      #neptune {
+        width: 45px;
+        height: 45px;
+        top: 80%;
+        left: 75%;
+        animation: rotate-planet 28s linear infinite;
+        animation-delay: 8s;
+      }
+
+      /* Animations for rotation */
+      @keyframes rotate-sun {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+      @keyframes rotate-planet {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+    </head>
+    <link rel="stylesheet" href="solar.css">
+    <body>
+        <em><h1>bigconfee solar Browser</h1></em>
+        <div id="solar-system">
+          <div id="sun" class="planet"></div>
+          <div id="mercury" class="planet"></div>
+          <div id="venus" class="planet"></div>
+          <div id="earth" class="planet"></div>
+          <div id="mars" class="planet"></div>
+          <div id="jupiter" class="planet"></div>
+            <div id="saturn" class="planet"></div>
+            <div id="uranus" class="planet"></div>
+            <div id="neptune" class="planet"></div>
+          </div> 
+</body>
+</html>
